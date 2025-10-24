@@ -11,11 +11,10 @@ get_header();
     <section class="hero">
         <div class="hero__content">
             <div class="hero__inner">
-                <div class="hero__text">
-                    <div class="hero__text-block">
+                <div class="hero__body">
+                    <div class="hero__intro">
                         <span class="hero__eyebrow">Elektronika przemysłowa · B2B</span>
-                        <div class="hero__layout">
-                            <div class="hero__device" aria-hidden="true">DIN</div>
+                        <div class="hero__split">
                             <div class="hero__copy">
                                 <h1 class="hero__title"><?php esc_html_e( 'Elektryka i Automatyka — wysyłka 24–48 h', 'dinlogic' ); ?></h1>
                                 <p class="hero__description"><?php esc_html_e( 'Zenergia do monogoi – Dla ocieli dla besctie tu resciapew a Euroscia.', 'dinlogic' ); ?></p>
@@ -26,43 +25,44 @@ get_header();
                                     ?>
                                 </div>
                             </div>
+                            <div class="hero__device" aria-hidden="true">DIN</div>
                         </div>
-                        <aside class="hero__image" aria-labelledby="quick-order-title">
-                            <div class="quick-order" id="order">
-                                <h2 class="quick-order__title" id="quick-order-title"><?php esc_html_e( 'Quick Order PRO', 'dinlogic' ); ?></h2>
-                                <p class="hero__description"><?php esc_html_e( 'Wklej numery katalogowe, aby dodać produkty do koszyka w kilka sekund.', 'dinlogic' ); ?></p>
-                                <form class="quick-order__form">
-                                    <div class="quick-order__input">
-                                        <label for="quick-order-csv"><?php esc_html_e( 'Import CSV', 'dinlogic' ); ?></label>
-                                        <input id="quick-order-csv" type="text" placeholder="np. 3RT2012-1AB04, QF5/32, ..." data-quick-order-input>
-                                    </div>
-                                    <div class="quick-order__actions">
-                                        <button class="btn" type="submit"><?php esc_html_e( 'Utwórz BOM', 'dinlogic' ); ?></button>
-                                        <button class="btn btn--outline" data-quick-order-clear><?php esc_html_e( 'Wyczyść', 'dinlogic' ); ?></button>
-                                    </div>
-                                </form>
-                                <div class="quick-order__links">
-                                    <a href="#catalogue"><?php esc_html_e( 'Import CSV', 'dinlogic' ); ?></a>
-                                    <a href="#support"><?php esc_html_e( 'Wsparcie techniczne', 'dinlogic' ); ?></a>
-                                </div>
+                        <div class="hero__stats">
+                            <div class="hero__stat">
+                                <span class="hero__stat-value">1 200+</span>
+                                <span><?php esc_html_e( 'Referencji magazynowych', 'dinlogic' ); ?></span>
                             </div>
-                        </aside>
+                            <div class="hero__stat">
+                                <span class="hero__stat-value">24h</span>
+                                <span><?php esc_html_e( 'Średni czas realizacji', 'dinlogic' ); ?></span>
+                            </div>
+                            <div class="hero__stat">
+                                <span class="hero__stat-value">98%</span>
+                                <span><?php esc_html_e( 'Pozytywnych opinii B2B', 'dinlogic' ); ?></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="hero__stats">
-                <div class="hero__stat">
-                    <span class="hero__stat-value">1 200+</span>
-                    <span><?php esc_html_e( 'Referencji magazynowych', 'dinlogic' ); ?></span>
-                </div>
-                <div class="hero__stat">
-                    <span class="hero__stat-value">24h</span>
-                    <span><?php esc_html_e( 'Średni czas realizacji', 'dinlogic' ); ?></span>
-                </div>
-                <div class="hero__stat">
-                    <span class="hero__stat-value">98%</span>
-                    <span><?php esc_html_e( 'Pozytywnych opinii B2B', 'dinlogic' ); ?></span>
-                </div>
+                <aside class="hero__order" aria-labelledby="quick-order-title">
+                    <div class="quick-order" id="order">
+                        <h2 class="quick-order__title" id="quick-order-title"><?php esc_html_e( 'Quick Order PRO', 'dinlogic' ); ?></h2>
+                        <p class="hero__description"><?php esc_html_e( 'Wklej numery katalogowe, aby dodać produkty do koszyka w kilka sekund.', 'dinlogic' ); ?></p>
+                        <form class="quick-order__form">
+                            <div class="quick-order__input">
+                                <label for="quick-order-csv"><?php esc_html_e( 'Import CSV', 'dinlogic' ); ?></label>
+                                <input id="quick-order-csv" type="text" placeholder="np. 3RT2012-1AB04, QF5/32, ..." data-quick-order-input>
+                            </div>
+                            <div class="quick-order__actions">
+                                <button class="btn" type="submit"><?php esc_html_e( 'Utwórz BOM', 'dinlogic' ); ?></button>
+                                <button class="btn btn--outline" data-quick-order-clear><?php esc_html_e( 'Wyczyść', 'dinlogic' ); ?></button>
+                            </div>
+                        </form>
+                        <div class="quick-order__links">
+                            <a href="#catalogue"><?php esc_html_e( 'Import CSV', 'dinlogic' ); ?></a>
+                            <a href="#support"><?php esc_html_e( 'Wsparcie techniczne', 'dinlogic' ); ?></a>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>

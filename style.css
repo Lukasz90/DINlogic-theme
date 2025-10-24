@@ -189,10 +189,7 @@ textarea {
 }
 
 .hero__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
-    gap: 48px;
-    align-items: center;
+    width: 100%;
 }
 
 .hero__text {
@@ -202,9 +199,9 @@ textarea {
 }
 
 .hero__text-block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 28px;
+    justify-items: start;
 }
 
 .hero__eyebrow {
@@ -269,6 +266,7 @@ textarea {
     gap: 24px;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 .hero__image::before {
@@ -510,13 +508,40 @@ textarea {
     line-height: 1.7;
 }
 
-@media (max-width: 1200px) {
-    .hero__inner {
-        grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+    .hero__text-block {
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        grid-template-areas:
+            "eyebrow eyebrow"
+            "title image"
+            "description image"
+            "actions image";
+        column-gap: 48px;
+    }
+
+    .hero__eyebrow {
+        grid-area: eyebrow;
+    }
+
+    .hero__title {
+        grid-area: title;
     }
 
     .hero__image {
-        order: -1;
+        grid-area: image;
+        align-self: stretch;
+        justify-self: end;
+        max-width: 420px;
+    }
+
+    .hero__description {
+        grid-area: description;
+        max-width: 560px;
+    }
+
+    .hero__actions {
+        grid-area: actions;
+        align-self: start;
     }
 }
 

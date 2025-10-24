@@ -178,9 +178,6 @@ textarea {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1.25fr 0.85fr;
-    gap: 48px;
     padding: 0 48px 64px;
     position: relative;
 }
@@ -188,8 +185,26 @@ textarea {
 .hero__content {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 36px;
+}
+
+.hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.hero__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 
 .hero__eyebrow {
@@ -496,7 +511,7 @@ textarea {
 }
 
 @media (max-width: 1200px) {
-    .hero {
+    .hero__inner {
         grid-template-columns: 1fr;
     }
 

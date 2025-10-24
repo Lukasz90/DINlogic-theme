@@ -14,9 +14,20 @@ get_header();
                 <div class="hero__text">
                     <div class="hero__text-block">
                         <span class="hero__eyebrow">Elektronika przemysłowa · B2B</span>
-                        <h1 class="hero__title"><?php esc_html_e( 'Elektryka i Automatyka — wysyłka 24–48 h', 'dinlogic' ); ?></h1>
-                        <aside class="hero__image" aria-labelledby="quick-order-title">
+                        <div class="hero__layout">
                             <div class="hero__device" aria-hidden="true">DIN</div>
+                            <div class="hero__copy">
+                                <h1 class="hero__title"><?php esc_html_e( 'Elektryka i Automatyka — wysyłka 24–48 h', 'dinlogic' ); ?></h1>
+                                <p class="hero__description"><?php esc_html_e( 'Zenergia do monogoi – Dla ocieli dla besctie tu resciapew a Euroscia.', 'dinlogic' ); ?></p>
+                                <div class="hero__actions">
+                                    <?php
+                                    dinlogic_render_button( __( 'Zobacz produkty', 'dinlogic' ), '#products' );
+                                    dinlogic_render_button( __( 'Zamów od ręki', 'dinlogic' ), '#order', 'outline' );
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="hero__image" aria-labelledby="quick-order-title">
                             <div class="quick-order" id="order">
                                 <h2 class="quick-order__title" id="quick-order-title"><?php esc_html_e( 'Quick Order PRO', 'dinlogic' ); ?></h2>
                                 <p class="hero__description"><?php esc_html_e( 'Wklej numery katalogowe, aby dodać produkty do koszyka w kilka sekund.', 'dinlogic' ); ?></p>
@@ -36,13 +47,6 @@ get_header();
                                 </div>
                             </div>
                         </aside>
-                        <p class="hero__description"><?php esc_html_e( 'Zenergia do monogoi – Dla ocieli dla besctie tu resciapew a Euroscia.', 'dinlogic' ); ?></p>
-                        <div class="hero__actions">
-                            <?php
-                            dinlogic_render_button( __( 'Zobacz produkty', 'dinlogic' ), '#products' );
-                            dinlogic_render_button( __( 'Zamów od ręki', 'dinlogic' ), '#order', 'outline' );
-                            ?>
-                        </div>
                     </div>
                 </div>
             </div>

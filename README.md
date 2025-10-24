@@ -2,6 +2,13 @@
 
 Custom WordPress theme inspired by the DINLogic concept hero screen. The front page features a gradient backdrop, quick order widget, category shortcuts, and a promotional banner matching the provided mock-up.
 
+## Front Page Layout
+
+1. **Hero sekcja (górna część strony)** – gradientowe tło z lewej kolumną treści. Zawiera etykietę branżową, nagłówek z głównym hasłem, opis, dwa przyciski CTA oraz trzy kafelki statystyk.
+2. **Panel szybkiego zamówienia** – po prawej stronie hero znajduje się moduł „Quick Order PRO" z widocznym placeholderem urządzenia DIN, formularzem wklejania numerów katalogowych, przyciskiem tworzenia BOM oraz linkami do importu CSV i wsparcia.
+3. **Siatka kategorii** – sekcja „Twoje najczęstsze kategorie” pod hero. W nagłówku tytuł i opis, a niżej dwukolumnowa (na desktopie) siatka kafelków kategorii z ikoną emoji, nazwą i krótką charakterystyką.
+4. **Baner informacyjny** – na dole front page widoczny jest moduł z hasłem „Dedykowany opiekun B2B”, opisem oraz przyciskiem „Umów konsultację”. Sekcja ta posiada jednolite tło kontrastowe wobec hero.
+
 ## Installation
 
 1. Copy the theme directory to `wp-content/themes/dinlogic` in your WordPress installation.

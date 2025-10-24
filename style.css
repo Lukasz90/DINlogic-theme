@@ -193,7 +193,7 @@ textarea {
     display: grid;
     gap: 40px;
     align-items: stretch;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+    grid-template-columns: 1.25fr 0.85fr;
 }
 
 .hero__body {
@@ -212,7 +212,7 @@ textarea {
     display: grid;
     gap: 24px;
     width: 100%;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+    grid-template-columns: 1.25fr 0.85fr;
 }
 
 .hero__copy {

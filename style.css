@@ -231,6 +231,8 @@ textarea {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    max-width: 320px;
+    width: 100%;
 }
 
 .hero__eyebrow {
@@ -522,7 +524,7 @@ textarea {
 
 @media (min-width: 768px) {
     .hero__copy-layout {
-        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.85fr);
+        grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.6fr);
         align-items: center;
     }
 }
@@ -546,7 +548,7 @@ textarea {
     }
 
     .hero__copy-layout {
-        grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.9fr);
+        grid-template-columns: minmax(0, 1.85fr) minmax(260px, 0.55fr);
     }
 }
 

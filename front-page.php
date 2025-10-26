@@ -16,43 +16,47 @@ get_header();
                         <span class="hero__eyebrow">Elektronika przemysłowa · B2B</span>
                         <div class="hero__split">
                             <div class="hero__copy">
-                                <h1 class="hero__title"><?php esc_html_e( 'Elektryka i Automatyka — wysyłka 24–48 h', 'dinlogic' ); ?></h1>
-                                <p class="hero__description"><?php esc_html_e( 'Zenergia do monogoi – Dla ocieli dla besctie tu resciapew a Euroscia.', 'dinlogic' ); ?></p>
-                                <div class="hero__actions">
+                                <div class="hero__copy-layout">
+                                    <div class="hero__copy-main">
+                                        <h1 class="hero__title"><?php esc_html_e( 'Elektryka i Automatyka — wysyłka 24–48 h', 'dinlogic' ); ?></h1>
+                                        <p class="hero__description"><?php esc_html_e( 'Zenergia do monogoi – Dla ocieli dla besctie tu resciapew a Euroscia.', 'dinlogic' ); ?></p>
+                                        <div class="hero__actions">
+                                            <?php
+                                            dinlogic_render_button( __( 'Zobacz produkty', 'dinlogic' ), '#products' );
+                                            dinlogic_render_button( __( 'Zamów od ręki', 'dinlogic' ), '#order', 'outline' );
+                                            ?>
+                                        </div>
+                                    </div>
                                     <?php
-                                    dinlogic_render_button( __( 'Zobacz produkty', 'dinlogic' ), '#products' );
-                                    dinlogic_render_button( __( 'Zamów od ręki', 'dinlogic' ), '#order', 'outline' );
-                                    ?>
+                                    $hero_device_id   = get_theme_mod( 'dinlogic_hero_device_image' );
+                                    $hero_device_html = '';
+
+                                    if ( $hero_device_id ) {
+                                        $hero_device_html = wp_get_attachment_image(
+                                            $hero_device_id,
+                                            'dinlogic-hero',
+                                            false,
+                                            array( 'loading' => 'lazy' )
+                                        );
+                                    } else {
+                                        $hero_device_file = DINLOGIC_THEME_DIR . '/assets/images/hero-device.png';
+
+                                        if ( file_exists( $hero_device_file ) ) {
+                                            $hero_device_html = sprintf(
+                                                '<img src="%s" alt="" loading="lazy">',
+                                                esc_url( DINLOGIC_THEME_URI . '/assets/images/hero-device.png' )
+                                            );
+                                        }
+                                    }
+
+                                    if ( $hero_device_html ) :
+                                        ?>
+                                        <div class="hero__device" aria-hidden="true">
+                                            <?php echo $hero_device_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                            <?php
-                            $hero_device_id   = get_theme_mod( 'dinlogic_hero_device_image' );
-                            $hero_device_html = '';
-
-                            if ( $hero_device_id ) {
-                                $hero_device_html = wp_get_attachment_image(
-                                    $hero_device_id,
-                                    'dinlogic-hero',
-                                    false,
-                                    array( 'loading' => 'lazy' )
-                                );
-                            } else {
-                                $hero_device_file = DINLOGIC_THEME_DIR . '/assets/images/hero-device.png';
-
-                                if ( file_exists( $hero_device_file ) ) {
-                                    $hero_device_html = sprintf(
-                                        '<img src="%s" alt="" loading="lazy">',
-                                        esc_url( DINLOGIC_THEME_URI . '/assets/images/hero-device.png' )
-                                    );
-                                }
-                            }
-
-                            if ( $hero_device_html ) :
-                                ?>
-                                <div class="hero__device" aria-hidden="true">
-                                    <?php echo $hero_device_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-                                </div>
-                            <?php endif; ?>
                         </div>
                         <div class="hero__stats">
                             <div class="hero__stat">

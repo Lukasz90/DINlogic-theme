@@ -12,7 +12,7 @@ Text Domain: dinlogic
 
 :root {
     --color-background: #dff8ef;
-    --color-background-gradient-start: #e6fbf3;
+    --color-background-gradient-start: #1f8f73;
     --color-background-gradient-end: #32b98a;
     --color-surface: rgba(255, 255, 255, 0.55);
     --color-surface-strong: rgba(255, 255, 255, 0.72);

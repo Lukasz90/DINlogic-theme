@@ -1,0 +1,3 @@
+# Ignore local media assets so binary files never enter the repository
+assets/images/hero-device.png
+assets/images/hero-device@2x.png

@@ -227,6 +227,12 @@ textarea {
     justify-items: start;
 }
 
+.hero__copy-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .hero__eyebrow {
     display: inline-flex;
     align-items: center;
@@ -558,9 +564,12 @@ textarea {
         grid-template-columns: 1fr;
     }
 
+    .hero__copy-media {
+        justify-content: center;
+    }
+
     .hero__device {
         justify-content: center;
-        justify-self: center;
     }
 
     .site-header {

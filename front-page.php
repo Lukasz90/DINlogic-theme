@@ -46,13 +46,20 @@ get_header();
                                                 '<img src="%s" alt="" loading="lazy">',
                                                 esc_url( DINLOGIC_THEME_URI . '/assets/images/hero-device.png' )
                                             );
+                                        } else {
+                                            $hero_device_html = sprintf(
+                                                '<img src="%s" alt="" loading="lazy">',
+                                                esc_url( 'https://example.com/path-to-hero-device.png' )
+                                            );
                                         }
                                     }
 
                                     if ( $hero_device_html ) :
                                         ?>
-                                        <div class="hero__device" aria-hidden="true">
-                                            <?php echo $hero_device_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                        <div class="hero__copy-media" aria-hidden="true">
+                                            <div class="hero__device">
+                                                <?php echo $hero_device_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                            </div>
                                         </div>
                                     <?php endif; ?>
                                 </div>
